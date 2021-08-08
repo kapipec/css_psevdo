@@ -1,0 +1,194 @@
+/*
+Селекторы
+div{}    
+.class1{}
+#id1{}
+-------------
+div.class1 {}  <div class="class1">
+div > p{} для всех р на 1 уровне вложености дива
+div .class1 {} любой уровень вложености для элементов дива с классом class1
+div > .class1{} 1-й уровень вложености для элементов дива с классом class1
+div > .class1, p{} тоже но и для р
+div+div {} для соседних дивов
+*/
+
+/*
+КАСКАДНОСТЬ СТИЛЕЙ
+Приоритет .class и #id выше чем просто <а>, <li>
+
+* - 1
+class - 10
+id - 100
+<style> - 1000
+!important - 10000
+
+*/
+/*
+* {
+    margin:0;
+}
+
+:root {
+    --first-font-size: 14px;
+    --second-font-style: 20px;
+    --hover-color-font:white;
+    --primary-color:black;
+    --second-color:blue;
+}
+
+li {
+    margin: 20px;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+.linkClass {
+    color: green;
+}
+
+#linkId {
+    color: blueviolet;
+}
+
+#linkId2 {
+    color: black;
+}
+
+info123 {
+    text-transform: uppercase;
+    display: flex;
+}
+*/
+/*
+ПСЕВДОКЛАССЫ
+
+селектор:псевдокласс {
+    проперти:валюе;
+    проперти:валюе;
+    проперти:валюе;
+}
+*/
+/*
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: pink;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: yellow;
+}
+
+div {
+    background-color: blue;
+    color: white;
+    margin: 20px;
+}
+
+div:hover {
+    background-color: orangered;
+    color:black;
+}
+
+p {
+    display: none;
+    padding: 10px;
+    background-color: brown;
+    margin-top: 20px;
+}
+
+div:hover p {
+    display: block;
+    margin-left: 20px;
+}
+
+div.class1 :hover {
+    color:brown;
+    color: white;
+    font-size: 20px;
+}
+
+div.divId :hover {
+    color: var(--hover-color-font);
+    background-color: var(--second-color);
+}
+*/
+
+/* Псевдоклассы дочерних
+:first-child первым дочерним элементам
+:last-child последним дочерним элементам
+:nth-child(n) дочерним элементам с номером Н
+:nth-of-type(n) дочерний элемент определенного типа по порядку Н
+*/
+/*
+a:first-child {
+    background-color: blue;
+}
+
+a:last-child {
+    background-color: red;
+}
+
+a:nth-child(3) {
+    color:greenyellow;
+    background-color: black;
+}
+
+a {
+    display: block;
+}
+*/
+
+table,th,td {
+    border: 2px solid black;
+    padding: 10px;
+    border-collapse:collapse;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+tfoot {
+    background-color: gray;
+}
+
+/*even - 4etniye ; odd - ne4etniye*/
+
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color: darkturquoise;
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+    background-color: paleturquoise;
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: paleturquoise;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+    background-color: azure;
+}
+
+/* Псевдоклассы дочерних
+:first-child первым дочерним элементам
+:last-child последним дочерним элементам
+:nth-child(n) дочерним элементам с номером Н
+:nth-of-type(n) дочерний элемент определенного типа по порядку Н
+*/
