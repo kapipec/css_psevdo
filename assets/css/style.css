@@ -147,7 +147,7 @@ a {
     display: block;
 }
 */
-
+/*
 table,th,td {
     border: 2px solid black;
     padding: 10px;
@@ -169,7 +169,7 @@ tfoot {
 }
 
 /*even - 4etniye ; odd - ne4etniye*/
-
+/*
 tr:nth-child(odd) td:nth-child(odd) {
     background-color: darkturquoise;
 }
@@ -185,10 +185,43 @@ tr:nth-child(even) td:nth-child(odd) {
 tr:nth-child(even) td:nth-child(even) {
     background-color: azure;
 }
-
-/* Псевдоклассы дочерних
-:first-child первым дочерним элементам
-:last-child последним дочерним элементам
-:nth-child(n) дочерним элементам с номером Н
-:nth-of-type(n) дочерний элемент определенного типа по порядку Н
 */
+
+/* ПСЕВДОЭЛЕМЕНТЫ
+::first-letter выбрать первую букву из текста 
+::first-line первая строка текста
+::before сообщение до определенного элемента
+::after сообщение после определенного элемента
+::selection выбирает выбранные пользователем элементы
+*/
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+p.classP::first-letter {
+    color: blue;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+p.classP::first-line {
+    text-decoration: overline;
+}
+
+p.classP::selection {
+    background-color: red;
+    color:white;
+    cursor: pointer;
+}
+
+/*before, after есть свойтсво content*/
+
+p.classP::before {
+    content: url(https://img1.freepng.ru/20171220/gze/twitter-logo-png-5a3a1851372e76.0876249315137567532269680.jpg);
+}
+
+p.classP::after {
+    content: url(https://img1.freepng.ru/20171220/gze/twitter-logo-png-5a3a1851372e76.0876249315137567532269680.jpg);
+}
